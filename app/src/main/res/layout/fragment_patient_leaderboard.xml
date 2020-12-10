@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.fragmentspatient.PatientExercise"
+    android:layout_margin="40dp">
+
+    <RelativeLayout
+        android:id="@+id/patient_leaderboard_header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/fragment_layout_round_brown"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/patient_leaderboard_position_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patient_leaderboard_position_header"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/colorHeaderText"
+            android:paddingStart="60dp"
+            android:fontFamily="@font/caveatbrush_regular"/>
+
+        <TextView
+            android:id="@+id/patient_leaderboard_patient_codename_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:text="@string/patient_leaderboard_patient_codename_header"
+            android:textAlignment="center"
+            android:textColor="@color/colorHeaderText"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/patient_leaderboard_points_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patient_leaderboard_points_header"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/colorHeaderText"
+            android:paddingStart="60dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="60dp"
+            android:fontFamily="@font/caveatbrush_regular"/>
+        
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/customListView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="15dp"
+        android:layout_below="@+id/patient_leaderboard_header"
+        android:layout_marginTop="20dp"/>
+
+    <ProgressBar
+        android:id="@+id/loading_progress"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

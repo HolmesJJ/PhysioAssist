@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlankCanvas"
+    android:background="@drawable/background"
+    android:id="@+id/blank_canvas">
+
+    <Button
+        android:id="@+id/blank_canvas_btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_back"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"/>
+
+    <Button
+        android:id="@+id/patient_btn_send_gift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/patient_btn_send_gift"
+        android:background="@drawable/menu_button"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/caveatbrush_regular"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="25dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/fragment_container_blankcanvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/blank_canvas_btn_back"
+        android:layout_marginTop="-20dp">
+    </LinearLayout>
+
+</RelativeLayout>

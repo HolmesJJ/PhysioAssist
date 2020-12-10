@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="60dp"
+    android:layout_height="60dp">
+
+    <ImageView
+        android:id="@+id/patient_progress_gift_grid_item_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/achievement_well_done"
+        android:contentDescription="@string/patient_progress_trophy_grid_item_image_desc"/>
+
+</LinearLayout>

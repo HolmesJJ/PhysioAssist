@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_contain"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/fragment_layout_round_white_translucent"
+    android:gravity="center_vertical"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
+
+    <TextView
+        android:id="@+id/patient_leaderboard_position"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/patient_leaderboard_position"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textColor="@color/colorBtnText"
+        android:paddingStart="60dp"
+        android:paddingEnd="60dp"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/caveatbrush_regular"/>
+
+    <TextView
+        android:id="@+id/patient_leaderboard_patient_codename"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/patient_leaderboard_patient_codename"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textColor="@color/colorBtnText"
+        android:gravity="center_horizontal|center_vertical"
+        android:fontFamily="@font/caveatbrush_regular"/>
+
+    <TextView
+        android:id="@+id/patient_leaderboard_points"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/patient_leaderboard_points"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textColor="@color/colorBtnText"
+        android:layout_alignParentEnd="true"
+        android:drawableStart="@drawable/img_coin_leaderboard_scale"
+        android:drawablePadding="20dp"
+        android:paddingStart="60dp"
+        android:paddingEnd="60dp"
+        android:gravity="center_vertical"/>
+
+</RelativeLayout>

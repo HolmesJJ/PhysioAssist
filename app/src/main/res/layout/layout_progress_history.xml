@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fragment_layout_round_white2">
+
+    <TextView
+        android:id="@+id/progress_history_item_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/progress_history_item_header"
+        android:textSize="30sp"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/caveatbrush_regular"/>
+
+    <TextView
+        android:id="@+id/progress_history_item_sub_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/progress_history_item_sub_header"
+        android:textSize="20sp"
+        android:layout_below="@+id/progress_history_item_header"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/caveatbrush_regular"/>
+
+    <sg.com.nyp.a164936j.physioAssist.customcomponents.WrappingGridView
+        android:id="@+id/progress_history_gridview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progress_history_item_sub_header"
+        android:numColumns="10"
+        android:layout_margin="10dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:id="@+id/settings_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000">
+
+        <RelativeLayout
+            android:id="@+id/settings_statusContainer"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:background="@drawable/fragment_layout_round_yellow_translucent"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:id="@+id/settings_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_header"
+                android:textColor="@color/colorBtnText"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:textSize="55sp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="40dp"/>
+
+            <TextView
+                android:id="@+id/settings_sub_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_sub_header"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_marginStart="40dp"
+                android:layout_below="@id/settings_header"/>
+
+            <TextView
+                android:id="@+id/device_list"
+                android:text="No Device..."
+                android:textColor="@color/blue"
+                android:textSize="30dp"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/settings_sub_header"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/settings_btnContainer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_below="@+id/settings_statusContainer">
+
+            <Button
+                android:id="@+id/pair_new_device"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:background="@drawable/menu_button"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:gravity="center"
+                android:text="@string/pair_new_device"
+                android:textColor="@drawable/btn_patient_color"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/sync_pairing"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:background="@drawable/menu_button"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:gravity="center"
+                android:text="@string/sync_pairing"
+                android:textColor="@drawable/btn_patient_color"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settings_btnContainer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_below="@+id/settings_btnContainer1">
+
+            <Button
+                android:id="@+id/remove_all_devices"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:background="@drawable/menu_button"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:gravity="center"
+                android:text="@string/remove_all_devices"
+                android:textColor="@drawable/btn_patient_color"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/ease_all_devices"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:background="@drawable/menu_button"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:gravity="center"
+                android:text="@string/ease_all_devices"
+                android:textColor="@drawable/btn_patient_color"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/settings_btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patient_tutorial_btn_close"
+            android:background="@android:color/transparent"
+            android:textSize="50sp"
+            android:textColor="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="50dp"
+            android:fontFamily="@font/caveatbrush_regular"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/circle_progress"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/horizontal_progress"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/progressbar"
+        android:layout_alignParentBottom="true"
+        android:max="100"
+        android:progress="0"/>
+
+</RelativeLayout>

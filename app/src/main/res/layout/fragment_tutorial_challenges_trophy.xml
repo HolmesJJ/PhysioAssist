@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tutorials.fragments.TutorialChallengesTrophy"
+    android:background="@drawable/background2">
+
+    <RelativeLayout
+        android:id="@+id/patient_grid_header"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="40dp"
+        android:background="@drawable/fragment_layout_round_brown"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/patient_grid_codename_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:gravity="center_horizontal"
+            android:paddingEnd="0dp"
+            android:text="@string/patient_grid_codename_header"
+            android:textColor="@color/colorHeaderText"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/patient_grid_header"
+        android:id="@+id/grid_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:overScrollMode="never"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="178dp">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fragment_layout_round_white_translucent"
+                android:gravity="center"
+                android:padding="30dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="10dp">
+
+                <ImageView
+                    android:id="@+id/patient_challenge_grid_item_image"
+                    android:layout_width="127dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/trophy_checked"
+                    android:contentDescription="@string/patient_challenge_grid_item_image_desc"/>
+
+                <TextView
+                    android:id="@+id/patient_challenge_grid_item_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/patient_tutorial_text_challenges_item"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/patient_tutorial_text_challenges_item"
+                android:textSize="38sp"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:textColor="@android:color/white"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/left_arrow"
+                android:layout_marginStart="40dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/patient_tutorial_btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/patient_tutorial_btn_close"
+        android:background="@android:color/transparent"
+        android:textSize="50sp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="50dp"
+        android:fontFamily="@font/caveatbrush_regular"/>
+
+</RelativeLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:id="@+id/init_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/blank_canvas_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_back"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"/>
+
+        <Button
+            android:id="@+id/other_exercise_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_more"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="25dp"/>
+
+        <LinearLayout
+            android:id="@+id/init_statusContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/calibrationImage"
+                android:layout_width="wrap_content"
+                android:layout_height="550dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/body"
+                android:scaleType="fitCenter" />
+
+            <LinearLayout
+                android:id="@+id/calibrationContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/calibrationImage">
+
+                <Button
+                    android:id="@+id/start_calibration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start_calibration"
+                    android:textSize="40sp"
+                    android:background="@drawable/menu_button"
+                    android:fontFamily="@font/caveatbrush_regular"
+                    android:width="300dp"
+                    android:textColor="@color/colorBtnText"/>
+
+                <ImageButton
+                    android:id="@+id/calibration_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:src="@drawable/ic_help"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/init_btnContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/config_steady1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/config_steady"
+                android:background="@android:color/transparent"
+                android:textSize="50sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:layout_alignParentRight="true"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/config_steady2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/config_steady"
+                android:background="@android:color/transparent"
+                android:textSize="50sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/start_steady1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_steady"
+                android:background="@android:color/transparent"
+                android:textSize="50sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:layout_alignParentRight="true"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/start_steady2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_steady"
+                android:background="@android:color/transparent"
+                android:textSize="50sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/init_capture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/capture"
+                android:background="@android:color/transparent"
+                android:textSize="50sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:weightSum="1"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.25" />
+
+            <ImageView
+                android:id="@+id/dock_image"
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:src="@drawable/c0000"
+                android:rotation="180"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"/>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/circle_progress"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/horizontal_progress"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/progressbar"
+            android:layout_alignParentBottom="true"
+            android:max="100"
+            android:progress="0"/>
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/counter_text"
+            android:textColor="@color/white"
+            android:textSize="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

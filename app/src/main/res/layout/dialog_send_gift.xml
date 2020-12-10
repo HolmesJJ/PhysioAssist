@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fragment_layout_round_yellow"
+    android:layout_gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/patient_gift_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/patient_gift_title"
+        android:textSize="50sp"
+        android:fontFamily="@font/caveatbrush_regular"
+        android:textColor="@color/colorBtnText"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/patient_gift_subTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/patient_gift_subTitle"
+        android:textSize="30sp"
+        android:fontFamily="@font/caveatbrush_regular"
+        android:textColor="@color/colorBtnText"
+        android:textAlignment="center"
+        android:layout_below="@id/patient_gift_title"/>
+
+    <GridView
+        android:id="@+id/send_gift_grid_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/patient_gift_subTitle"
+        android:numColumns="2"
+        android:gravity="center"
+        android:stretchMode="spacingWidthUniform"
+        android:columnWidth="270dp"
+        android:scrollbars="none"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <Button
+        android:id="@+id/btn_send_gift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_send_gift"
+        android:textSize="40sp"
+        android:fontFamily="@font/caveatbrush_regular"
+        android:textColor="@color/colorBtnSendGiftText"
+        android:background="@drawable/btn_style_round_brown"
+        android:layout_below="@id/send_gift_grid_item_image"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ProgressBar
+        android:id="@+id/loading_progress"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

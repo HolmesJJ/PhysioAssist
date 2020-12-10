@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tc="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/exercise_thumbnail_container"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="20dp">
+
+        <ImageView
+            android:id="@+id/exercise_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/exercise_thumbnail_desc"
+            android:tint="#6F000000"/>
+
+        <sg.com.nyp.a164936j.physioAssist.customview.CustomCircleLoading
+            android:id="@+id/circleLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="false"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/infoSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/exercise_thumbnail_container"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:text="@string/video_title"
+            android:textSize="30sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnStartExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:text="@string/btnStartExercise"
+                android:background="@drawable/btn_start_video"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:textColor="@color/colorBtnText"
+                android:textSize="12sp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/btnStartExercise"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <sg.com.nyp.a164936j.physioAssist.customview.CircleProgressBar
+                    android:id="@+id/tasks_view"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    tc:circleColor="@color/white"
+                    tc:circleProgressBarRadius="20dip"
+                    tc:ringBgColor="@color/white2"
+                    tc:ringColor="#a46942"
+                    tc:strokeWidth="5dip" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

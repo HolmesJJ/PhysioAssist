@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/fragment_layout_round_yellow"
+    android:layout_gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/physio_choose_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/physio_choose_date"
+        android:textSize="50sp"
+        android:fontFamily="@font/caveatbrush_regular"
+        android:textColor="@color/colorBtnText"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"/>
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_below="@id/physio_choose_date"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        app:mcv_showOtherDates="all"
+        app:mcv_selectionColor="#00F" />
+
+</RelativeLayout>

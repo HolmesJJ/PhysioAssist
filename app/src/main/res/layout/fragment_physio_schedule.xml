@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.fragmentsphysio.PhysioSchedule"
+    android:background="@drawable/fragment_layout_round_white_translucent"
+    android:layout_margin="30dp">
+
+    <TextView
+        android:id="@+id/physio_schedule_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/physio_schedule_title"
+        android:textSize="40sp"
+        android:textColor="@color/colorBtnText"
+        android:textStyle="bold"
+        android:fontFamily="@font/caveatbrush_regular"
+        android:padding="30dp"/>
+
+    <ListView
+        android:id="@+id/physio_schedule_listview"
+        android:layout_width="420dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/physio_schedule_title"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="50dp"
+        android:dividerHeight="15dp"
+        android:divider="@android:color/transparent">
+
+    </ListView>
+
+    <View
+        android:id="@+id/vertical_divider"
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/physio_schedule_listview"
+        android:background="@color/colorBtnText"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"/>
+
+    <!-- Video Section -->
+    <TextView
+        android:id="@+id/physio_schedule_exercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/physio_schedule_exercise"
+        android:textSize="30sp"
+        android:layout_below="@id/physio_schedule_title"
+        android:layout_toEndOf="@+id/vertical_divider"
+        android:layout_marginStart="70dp"
+        android:fontFamily="@font/caveatbrush_regular"
+        android:layout_marginTop="70dp"/>
+
+    <Spinner
+        android:id="@+id/physio_schedule_exercise_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textSize="20sp"
+        android:layout_below="@id/physio_schedule_title"
+        android:layout_toEndOf="@id/physio_schedule_exercise"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="50dp"
+        android:padding="10dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/fragment_layout_round_white3"
+        android:fontFamily="@font/caveatbrush_regular">
+    </Spinner>
+
+    <!-- Frequency Section -->
+    <TextView
+        android:id="@+id/physio_schedule_frequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/physio_schedule_frequency"
+        android:textSize="30sp"
+        android:layout_below="@+id/physio_schedule_exercise"
+        android:layout_toEndOf="@+id/vertical_divider"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="65dp"
+        android:fontFamily="@font/caveatbrush_regular"/>
+
+    <Spinner
+        android:id="@+id/physio_schedule_frequency_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/physio_schedule_exercise_spinner"
+        android:layout_toEndOf="@+id/physio_schedule_frequency"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        android:background="@drawable/fragment_layout_round_white3">
+    </Spinner>
+
+    <Button
+        android:id="@+id/physio_schedule_btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/physio_schedule_btn_add"
+        android:textSize="20sp"
+        android:padding="20dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:background="@drawable/fragment_layout_round_yellow3"
+        android:layout_toEndOf="@id/physio_schedule_frequency"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"/>
+
+    <ProgressBar
+        android:id="@+id/spinner_progress"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tutorials.fragments.TutorialExerciseVideo"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fragment_layout_round_yellow_translucent"
+        android:layout_margin="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="50dp"
+            android:id="@+id/exercise_video_frame">
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/patient_exercise_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patient_exercise_header"
+            android:textColor="@color/colorBtnText"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:textSize="55sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="40dp"/>
+
+        <TextView
+            android:id="@+id/patient_exercise_sub_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patient_exercise_sub_header"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginStart="40dp"
+            android:layout_below="@id/patient_exercise_header"/>
+
+        <LinearLayout
+            android:id="@+id/multi_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@id/patient_exercise_sub_header"
+            android:paddingBottom="70dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:layout_marginTop="20dp"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/patient_exercise_type_header1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/patient_exercise_type_header1"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/caveatbrush_regular"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="15dp"/>
+
+                <ListView
+                    android:id="@+id/patient_customListView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:dividerHeight="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/patient_exercise_type_header2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/patient_exercise_type_header2"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/caveatbrush_regular"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="15dp"/>
+
+                <ListView
+                    android:id="@+id/patient_customListView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:dividerHeight="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="255dp"
+            android:layout_marginTop="278dp">
+
+            <Button
+                android:id="@+id/btnStartExercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnStartExercise"
+                android:background="@drawable/btn_start_video"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:textColor="@color/colorBtnText"
+                android:textSize="12sp"
+                android:paddingBottom="1dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
+
+            <TextView
+                android:id="@+id/patient_tutorial_btn_start_exercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/patient_tutorial_btn_start_exercise"
+                android:textSize="38sp"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:textColor="@android:color/white"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/left_arrow"
+                android:layout_marginStart="40dp"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

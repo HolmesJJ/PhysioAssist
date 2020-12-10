@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PA+</string>
+
+    <!-- Settings Fragment -->
+    <string name="default_user_license">wAoaFGVn5cFrrWU0YpuV</string>
+    <string name="settings_header">DEVICE LIST</string>
+    <string name="settings_sub_header">Current License: yDgKFLO0wpc3bYvZdPqD</string>
+    <string name="pair_new_device">PAIR NEW DEVICE</string>
+    <string name="sync_pairing">SYNC PAIRING</string>
+    <string name="remove_all_devices">REMOVE ALL DEVICES</string>
+    <string name="ease_all_devices">EASE ALL DEVICES</string>
+
+    <!-- Init Fragment -->
+    <string name="init_header">INITIALIZATION LIST</string>
+    <string name="init_sub_header">Please wear the notches according to the list</string>
+
+    <!-- Config Activity -->
+    <string name="start_calibration">CALIBRATE</string>
+    <string name="config_steady">CONFIG STEADY</string>
+    <string name="start_steady">START STEDAY</string>
+    <string name="capture">CAPTURE</string>
+
+    <!-- Visualiser Activity -->
+    <string name="visualiserActivity">VisualiserActivity</string>
+    <string name="open">Open</string>
+    <string name="pin_to_centre">Root bone in centre</string>
+    <string name="highlight_bones">Highlight bones</string>
+
+    <!-- Error -->
+    <string name="error_skeleton">Error while loading skeleton!</string>
+    <string name="error_invalid_measurement">Invalid measurement!</string>
+    <string name="logo_desc">PA+ LOGO</string>
+
+    <!-- Main Activity -->
+    <string name="full_app_name">PHYSIOTHERAPY ASSISTANT SYSTEM</string>
+    <string name="btn_patient">PATIENT</string>
+    <string name="btn_Physio">PHYSIOTHERAPIST</string>
+
+    <!-- Physio Login -->
+    <string name="title_physio">PHYSIOTHERAPISTS</string>
+    <string name="place_email">Email</string>
+    <string name="Place_password">Password</string>
+    <string name="btn_login">LOGIN</string>
+
+    <!-- Nav -->
+    <string name="nav_header">My Header Title</string>
+
+    <!-- Register Patient fragment -->
+    <string name="btn_register">REGISTER</string>
+
+    <!-- PhysioProgress fragment -->
+    <string name="progress">PROGRESS FRAGMENT</string>
+    <string name="physio_progress_patient_name">\'S PROGRESS</string>
+    <string name="physio_progress_day">Day:</string>
+    <string name="physio_progress_date">Date:</string>
+    <string name="physio_progress_date_from">yyyy-MM-dd</string>
+    <string name="physio_progress_date_txt">to</string>
+    <string name="physio_progress_date_to">yyyy-MM-dd</string>
+    <string name="physio_progress_video_label">LIST OF EXERCISE ASSIGNED :</string>
+    <string name="physio_progress_btn_graph">SHOW IN GRAPH</string>
+    <string name="physio_progress_checkbox">Exercise Title</string>
+
+    <!-- Physio Dashboard Overlay -->
+    <string name="welcome_physio">WELCOME," "</string>
+
+    <!-- Patient Activities -->
+    <string name="patient_activity_welcome_patient">Welcome," "</string>
+    <string name="patient_activity_btnExercise">EXERCISE</string>
+    <string name="patient_activity_btnProgress">PROGRESS</string>
+    <string name="patient_activity_btnChallenges">CHALLENGES</string>
+    <string name="patient_activity_btnLeaderboard">LEADERBOARD</string>
+    <string name="patient_activity_btnTutorial">Tutorial</string>
+    <string name="patient_activity_btnSettings">Settings</string>
+
+    <!-- Patient Exercise fragment -->
+    <string name="patient_exercise_header">EXERCISE</string>
+    <string name="patient_exercise_sub_header">RECOMMENDED BY SPECIALIST FOR YOU</string>
+    <string name="patient_exercise_type_header1">LYING DOWN</string>
+    <string name="patient_exercise_type_header2">SITTING UP</string>
+
+    <!-- Patient Exercise routine layout -->
+    <string name="exercise_thumbnail_desc">Property Image</string>
+    <string name="video_title">Video Title</string>
+    <string name="btnStartExercise">Start Now</string>
+    <string name="btnPlayBackVideo">Play Back</string>
+
+    <!-- Patient PhysioProgress fragment -->
+    <string name="progress_top_header">\'S PROGRESS</string>
+    <string name="progress_top_sub_header">Total amount of points accumulated:</string>
+    <string name="progress_top_score">0</string>
+    <string name="progress_top_medal_desc">Medal Image</string>
+    <string name="progress_history_header">HISTORY</string>
+    <string name="progress_trophy_header">Total no. of trophies collected:" "</string>
+    <string name="progress_gifts_header">GIFTS</string>
+
+    <!-- Patient Leaderboard fragment -->
+    <string name="patient_leaderboard_position_header">POSITION</string>
+    <string name="patient_leaderboard_patient_codename_header">NAME</string>
+    <string name="patient_leaderboard_points_header">POINTS</string>
+
+    <!-- Patient Leaderboard layout -->
+    <string name="patient_leaderboard_position">No." "%1$d</string>
+    <string name="patient_leaderboard_patient_codename">CODENAME</string>
+    <string name="patient_leaderboard_points">0</string>
+
+    <!-- Blank Activity -->
+    <string name="patient_btn_send_gift">SEND GIFT</string>
+
+    <!-- Dialog Send Gift -->
+    <string name="patient_gift_title">GIFT</string>
+    <string name="patient_gift_subTitle">Choose the gift you want to give!</string>
+    <string name="btn_send_gift">SEND</string>
+
+    <!-- Dialog Choose Date -->
+    <string name="physio_choose_date">Choose %1$s date</string>
+    <string name="btn_week_mode">Week</string>
+    <string name="btn_month_mode">Month</string>
+    <string name="physio_confirm_date">Confirm</string>
+
+    <!-- Dialog Video Screen -->
+    <string name="btnSkipVideo">SKIP</string>
+    <string name="btnQuitVideo">QUIT</string>
+
+    <!-- Patient Challenge grid item -->
+    <string name="patient_challenge_grid_item_image_desc">Trophy</string>
+
+    <!-- Patient Challenge gridlayout -->
+    <string name="patient_grid_codename_header">CHALLENGES</string>
+
+    <!-- Send Gift grid item -->
+    <string name="send_gift_grid_item_image_desc">Achievement</string>
+
+    <!-- Select Patient Spinner Item -->
+    <string name="select_patient_codename">Patient Codename</string>
+
+    <!-- Select Exercise Spinner Item -->
+    <string name="select_exercise_name">Exercise Name</string>
+
+    <!-- Dialog Achievement Info -->
+    <string name="achievement_desc">You completed two sets of exercises in one day</string>
+
+    <!-- Patient PhysioProgress History Grid Item -->
+    <string name="patient_progress_history_grid_item_image_desc">Flower Petal</string>
+
+    <!-- PhysioProgress History layout -->
+    <string name="progress_history_item_header">History Item Header</string>
+    <string name="progress_history_item_sub_header">No. of times the exercise is completed</string>
+
+    <!-- PhysioProgress bar graph -->
+    <string name="progress_ar_graph_start_time_title">Start Time</string>
+    <string name="progress_ar_graph_end_time_title">End Time</string>
+    <string name="progress_ar_graph_angle_title">Angle</string>
+    <string name="progress_ar_graph_duration_title">Duration</string>
+    <string name="progress_ar_graph_play_back_btn">Play Back</string>
+
+    <!-- Patient PhysioProgress Trophy Grid Item -->
+    <string name="patient_progress_trophy_grid_item_image_desc">Trophy</string>
+
+    <!-- Physio Schedule fragment -->
+    <string name="physio_schedule_title">SCHEDULE</string>
+    <string name="physio_schedule_exercise">Exercise:</string>
+    <string name="physio_schedule_frequency">FREQUENCY:</string>
+    <string name="physio_schedule_exercise_search">Search Exercise</string>
+    <string name="physio_schedule_btn_add">ADD</string>
+    <string name="physio_schedule_item_time">11:00 AM</string>
+    <string name="physio_schedule_item_title">Exercise</string>
+    <string name="physio_schedule_item_type">Type</string>
+    <string name="physio_schedule_item_set">Set</string>
+    <string name="physio_schedule_item_repeat">Repeat</string>
+    <string name="physio_schedule_item_sitting_up">Sitting Up</string>
+    <string name="physio_schedule_item_lying_down">Lying Down</string>
+
+    <!-- Physio Schedule Bar Graph -->
+    <string name="physio_schedule_bar_graph_btn_back_desc">btn back</string>
+    <string name="physio_schedule_bar_graph_header">Summary from %1$s to %2$s</string>
+    <string name="title_activity_tutorials">Tutorials</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+
+    <!-- TUTORIAL SECTION -->
+
+    <!-- Tutorial One -->
+    <string name="tutorial_one">tutorial one</string>
+    <string name="patient_tutorial_text_exercise">PRESS HERE TO DO EXERCISE</string>
+    <!-- Tutorial Two -->
+    <string name="tutorial_two">tutorial Two</string>
+    <string name="patient_tutorial_text_progress">PRESS HERE TO CHECK YOUR PROGRESS</string>
+    <!-- Tutorial Three -->
+    <string name="tutorial_three">tutorial Three</string>
+    <string name="patient_tutorial_btn_start_exercise">PRESS HERE TO START EXERCISE</string>
+    <string name="tutorial_btn_finish">Close</string>
+    <!-- Tutorial Four -->
+    <string name="tutorial_four">tutorial Four</string>
+    <string name="patient_tutorial_text_challenges">PRESS HERE TO CHECK WHAT YOU\'VE ACHIEVED</string>
+    <!-- Tutorial Five -->
+    <string name="tutorial_five">tutorial Five</string>
+    <string name="patient_tutorial_text_leaderboard">PRESS HERE TO CHECK YOUR RANKING</string>
+    <!-- Tutorial Six -->
+    <string name="tutorial_six">tutorial Six</string>
+    <string name="patient_tutorial_text_challenges_item">PRESS HERE TO CHECK WHAT YOU\'VE ACHIEVED</string>
+
+    <string name="patient_tutorial_btn_close">CLOSE</string>
+
+
+</resources>

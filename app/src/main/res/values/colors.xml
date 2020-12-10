@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBtnText">#6D462C</color>
+    <color name="colorNavHead">#a46942</color>
+    <color name="colorNavView">#bd835c</color>
+    <color name="colorHeaderText">#c89878</color>
+    <color name="colorBtnSendGiftText">#F9EE6E</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white2">#f5f3f3</color>
+    <color name="black">#000000</color>
+    <color name="blue">#36a5cc</color>
+    <color name="gray">#323235</color>
+    <color name="line">#e8e8e8</color>
+    <color name="transparent">#00000000</color>
+</resources>

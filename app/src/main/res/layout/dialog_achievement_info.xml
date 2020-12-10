@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fragment_layout_round_white"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="60dp"
+    android:paddingBottom="60dp"
+    android:paddingStart="100dp"
+    android:paddingEnd="100dp">
+
+    <ImageView
+        android:id="@+id/patient_achievement_img"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:background="@drawable/trophy"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/achievement_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/achievement_desc"
+        android:textSize="60sp"
+        android:fontFamily="@font/caveatbrush_regular"
+        android:textColor="@color/colorBtnText"
+        android:textAlignment="center"
+        android:layout_marginTop="25dp"/>
+
+
+
+</LinearLayout>

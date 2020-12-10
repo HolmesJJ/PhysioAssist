@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Pressed State -->
+    <item android:drawable="@drawable/achievement_well_done_checked"
+        android:state_pressed="true" />
+
+    <!--Focused State-->
+    <item android:drawable="@drawable/achievement_well_done_checked"
+        android:state_focused="true" />
+
+    <!--Normal State-->
+    <item android:drawable="@drawable/achievement_well_done" />
+</selector>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.fragmentsphysio.PhysioLogin"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:background="@drawable/btn_home"
+            android:textColor="@color/colorBtnText"
+            android:padding="20dp"
+            android:textSize="30sp"
+            android:layout_margin="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/fullAppName"
+                android:text="@string/title_physio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBtnText"
+                android:textSize="80sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:layout_marginBottom="30dp"/>
+
+
+            <EditText
+                android:id="@+id/edt_physio_email"
+                android:layout_width="450dp"
+                android:layout_height="66dp"
+                android:hint="@string/place_email"
+                android:textAlignment="center"
+                android:inputType="text"
+                android:text="zentonio@gmail.com"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:background="@drawable/custom_textbox"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"/>
+
+            <EditText
+                android:id="@+id/edt_physio_pass"
+                android:layout_width="450dp"
+                android:layout_height="66dp"
+                android:hint="@string/Place_password"
+                android:textAlignment="center"
+                android:inputType="textPassword"
+                android:text="P@ssw0rd"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:background="@drawable/custom_textbox"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"/>
+
+            <Button
+                android:id="@+id/btnPhysioLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_login"
+                android:textSize="40sp"
+                android:background="@drawable/menu_button"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:width="433dp"
+                android:height="86dp"
+                android:layout_marginTop="80dp"
+                android:textColor="@color/colorBtnText"/>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/login_progress"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</FrameLayout>

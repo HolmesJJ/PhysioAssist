@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <VideoView
+        android:id="@+id/videoView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="50dp"
+        android:layout_above="@+id/btnSkipVideo"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/btnSkipVideo"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btnSkipVideo"
+        android:textSize="40sp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/fragment_layout_round_yellow_video"
+        android:fontFamily="@font/caveatbrush_regular"/>
+
+    <Button
+        android:id="@+id/btnQuitVideo"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btnQuitVideo"
+        android:textSize="40sp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/fragment_layout_round_yellow_video"
+        android:fontFamily="@font/caveatbrush_regular"/>
+
+</RelativeLayout>

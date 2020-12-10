@@ -1,0 +1,106 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.application'
+
+project.ext.modelAssetsDir = new File((File) project.buildDir, '../src/main/assets')
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "sg.com.nyp.a164936j.physioAssist"
+        minSdkVersion 26
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // Navigation drawer
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    // Android Chart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
+    // Dot Indicator
+    implementation 'com.chabbal:slidingdotsplash:1.0.2'
+    // GSON
+    implementation 'com.google.code.gson:gson:2.8.0'
+    // Notch
+    compile 'com.notch.sdk:sdk-android:1.1.333'
+    // EventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    // Video Player
+    implementation 'cn.jzvd:jiaozivideoplayer:6.3.1'
+    // Calendar
+    implementation 'com.github.prolificinteractive:material-calendarview:2.0.0'
+}
+
+task convertObj(type: JavaExec) {
+    ext.srcFile1 = file('../model/equipment_tutorial.obj')
+    ext.srcFile2 = file('../model/equipment_tutorial.js')
+    inputs.file files([srcFile1, srcFile2])
+    outputs.dir project.modelAssetsDir
+
+    main = 'com.wearnotch.visualiserutil.ObjConverter'
+    classpath = configurations.compile
+    args = [srcFile1.getAbsolutePath(), srcFile2.getAbsolutePath(),
+            new File((File) project.modelAssetsDir, 'equipment.dat').getAbsolutePath()]
+}
+
+task convertMtl(type: JavaExec) {
+    ext.srcFile = file('../model/equipment_tutorial.mtl')
+    inputs.file srcFile
+    outputs.dir project.modelAssetsDir
+
+    main = 'com.wearnotch.visualiserutil.MtlConverter'
+    classpath = configurations.compile
+    args = [srcFile.getAbsolutePath(),
+            new File((File) project.modelAssetsDir, 'equipment_mtl.dat').getAbsolutePath()]
+}
+
+project.afterEvaluate {
+    project.tasks.findAll {
+        it.name.startsWith('generate') && it.name.endsWith('Assets')
+    }.each {
+        it.dependsOn convertObj
+        it.dependsOn convertMtl
+    }
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.fragmentsphysio.PhysioProgressBarGraph"
+    android:background="@drawable/fragment_layout_round_white_translucent"
+    android:layout_margin="30dp">
+
+    <RelativeLayout
+        android:id="@+id/physio_progress_bar_graph_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/physio_progress_bar_graph_btn_back"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:src="@drawable/btn_back_black_normal"
+            android:scaleType="fitXY"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/physio_schedule_bar_graph_btn_back_desc"/>
+
+        <TextView
+            android:id="@+id/physio_progress_bar_graph_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/physio_schedule_bar_graph_header"
+            android:textSize="40sp"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/physio_progress_bar_graph_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/physio_progress_bar_graph_header_container">
+
+        <View
+            android:id="@+id/split_line"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"/>
+
+        <RelativeLayout
+            android:id="@+id/physio_progress_bar_graph_listview_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignEnd="@+id/split_line"
+            android:layout_alignParentStart="true">
+
+            <ListView
+                android:id="@+id/physio_progress_video_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:dividerHeight="10dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/physio_progress_bar_graph_graph_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignStart="@+id/split_line"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:id="@+id/physio_progress_bar_graph_exercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="35sp"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:layout_centerHorizontal="true"/>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/line_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/physio_progress_bar_graph_exercise"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_progress"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

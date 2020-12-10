@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.UserSelection">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="120dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="20dp">
+
+            <Button
+                android:id="@+id/patient_activity_btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/btn_home"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:padding="20dp"
+                android:textColor="@color/colorBtnText"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="0dp">
+
+                <Button
+                    android:id="@+id/patient_activity_btnSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/menu_button"
+                    android:fontFamily="@font/caveatbrush_regular"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="60dp"
+                    android:paddingRight="60dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/patient_activity_btnSettings"
+                    android:textColor="@drawable/btn_patient_color"
+                    android:textSize="30sp" />
+
+                <Button
+                    android:id="@+id/patient_activity_btnTutorial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/menu_button"
+                    android:fontFamily="@font/caveatbrush_regular"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="60dp"
+                    android:paddingRight="60dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/patient_activity_btnTutorial"
+                    android:textColor="@drawable/btn_patient_color"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/patients_btns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="75dp">
+
+            <TextView
+                android:id="@+id/patient_activity_welcome_patient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/caveatbrush_regular"
+                android:text="@string/patient_activity_welcome_patient"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="80sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/hr_btnRow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/patient_activity_btnExercise"
+                    android:layout_width="400dp"
+                    android:layout_height="130dp"
+                    android:background="@drawable/btn_exercise"
+                    android:fontFamily="@font/caveatbrush_regular"
+                    android:gravity="start|center_vertical"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="150dp"
+                    android:paddingTop="33dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/patient_activity_btnExercise"
+                    android:textColor="@drawable/btn_patient_color"
+                    android:textSize="50sp" />
+
+                <Button
+                    android:id="@+id/patient_activity_btnProgress"
+                    android:layout_width="400dp"
+                    android:layout_height="130dp"
+                    android:background="@drawable/btn_progress"
+                    android:fontFamily="@font/caveatbrush_regular"
+                    android:gravity="start|center_vertical"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="150dp"
+                    android:paddingTop="33dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/patient_activity_btnProgress"
+                    android:textColor="@drawable/btn_patient_color"
+                    android:textSize="50sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hr_btnRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/hr_btnRow1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/patient_activity_btnChallenges"
+                    android:layout_width="400dp"
+                    android:layout_height="130dp"
+                    android:background="@drawable/btn_challenges"
+                    android:fontFamily="@font/caveatbrush_regular"
+                    android:gravity="start|center_vertical"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="120dp"
+                    android:paddingTop="33dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/patient_activity_btnChallenges"
+                    android:textColor="@drawable/btn_patient_color"
+                    android:textSize="50sp" />
+
+                <Button
+                    android:id="@+id/patient_activity_btnLeaderboard"
+                    android:layout_width="400dp"
+                    android:layout_height="130dp"
+                    android:background="@drawable/btn_leaderboard"
+                    android:fontFamily="@font/caveatbrush_regular"
+                    android:gravity="start|center_vertical"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="110dp"
+                    android:paddingTop="33dp"
+                    android:paddingBottom="15dp"
+                    android:text="@string/patient_activity_btnLeaderboard"
+                    android:textColor="@drawable/btn_patient_color"
+                    android:textSize="50sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

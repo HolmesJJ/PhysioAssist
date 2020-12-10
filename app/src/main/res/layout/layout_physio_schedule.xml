@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fragment_layout_round_yellow3"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/physio_schedule_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:paddingTop="20dp"
+        android:paddingStart="30dp" />
+
+    <ListView
+        android:id="@+id/physio_schedule_item_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:nestedScrollingEnabled="true">
+
+    </ListView>
+
+</LinearLayout>
