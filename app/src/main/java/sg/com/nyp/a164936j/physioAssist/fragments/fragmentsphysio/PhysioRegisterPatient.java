@@ -100,20 +100,20 @@ public class PhysioRegisterPatient extends Fragment implements AdapterView.OnIte
     private void getPatientCodeName(){
         String accessToken = GetSetSharedPreferences.getDefaults("access_token", getActivity().getApplicationContext());
         GetAuth getAuthSpinnerTask = new GetAuth(PhysioRegisterPatient.this, GET_SPINNER_TASK_ID);
-        getAuthSpinnerTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/api/patients", accessToken);
+        getAuthSpinnerTask.execute("http://" + IPAddress.ipaddress + "/api/patients", accessToken);
     }
 
     // Spinner Drop down elements
     private void getStay(){
         String accessToken = GetSetSharedPreferences.getDefaults("access_token", getActivity().getApplicationContext());
         GetAuth getStayTask = new GetAuth(PhysioRegisterPatient.this, GET_STAY_TASK_ID);
-        getStayTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/api/patients/" + selectedPatientId + "/hospitalstay", accessToken);
+        getStayTask.execute("http://" + IPAddress.ipaddress + "/api/patients/" + selectedPatientId + "/hospitalstay", accessToken);
     }
 
     private void refreshToken() {
         String parameters = getParameters();
         PostForm refreshTokenTask = new PostForm(PhysioRegisterPatient.this, REFRESH_TOKEN_TASK_ID);
-        refreshTokenTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/token", parameters);
+        refreshTokenTask.execute("http://" + IPAddress.ipaddress + "/token", parameters);
     }
 
     // Convert information to JSON string

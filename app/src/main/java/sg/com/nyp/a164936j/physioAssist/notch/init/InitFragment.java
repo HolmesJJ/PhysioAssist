@@ -323,7 +323,7 @@ public class InitFragment extends BaseFragment implements View.OnClickListener, 
     private void getThumbnail(){
         String accessToken = GetSetSharedPreferences.getDefaults("access_token", getActivity().getApplicationContext());
         GetAuth getAuthThumbnailTask = new GetAuth(InitFragment.this, THUMBNAIL_TASK_ID);
-        getAuthThumbnailTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/api/hospitalstay/" + stayId + "/prescribed", accessToken);
+        getAuthThumbnailTask.execute("http://" + IPAddress.ipaddress + "/api/hospitalstay/" + stayId + "/prescribed", accessToken);
     }
 
     private void uploadPerformedExercise(){
@@ -332,13 +332,13 @@ public class InitFragment extends BaseFragment implements View.OnClickListener, 
         GetAuth getAuthThumbnailTask = new GetAuth(InitFragment.this, UPLOAD_PERFORMED_EXERCISE_ID);
         getAuthThumbnailTask.execute("http://" + IPAddress.ipaddress + "/test/Thumbnail.json", accessToken);
         // PostFormAuth uploadPerformedExerciseTask = new PostFormAuth(InitFragment.this, UPLOAD_PERFORMED_EXERCISE_ID);
-        // uploadPerformedExerciseTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/token", parameters, accessToken);
+        // uploadPerformedExerciseTask.execute("http://" + IPAddress.ipaddress + "/token", parameters, accessToken);
     }
 
     private void refreshToken() {
         String parameters = getParameters();
         PostForm refreshTokenTask = new PostForm(InitFragment.this, REFRESH_TOKEN_TASK_ID);
-        refreshTokenTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/token", parameters);
+        refreshTokenTask.execute("http://" + IPAddress.ipaddress + "/token", parameters);
     }
 
     // Convert information to JSON string
@@ -1464,7 +1464,7 @@ public class InitFragment extends BaseFragment implements View.OnClickListener, 
                         ExType1.add(jsonObject.getInt("ExType"));
                         ExSetNo1.add(jsonObject.getInt("ExSetNo"));
                         ExRepNo1.add(jsonObject.getInt("ExRepNo"));
-                        String imageURL = "http://" + IPAddress.awsipaddress + "/PhysioWebPortal/Images/" + jsonObject.getString("VThumbnail") +".jpg";
+                        String imageURL = "http://" + IPAddress.ipaddress + "/Images/" + jsonObject.getString("VThumbnail") +".jpg";
                         ExThumbnail1.add(imageURL);
                     }
                     else if(jsonObject.getInt("ExType") == 2) {
@@ -1474,7 +1474,7 @@ public class InitFragment extends BaseFragment implements View.OnClickListener, 
                         ExType2.add(jsonObject.getInt("ExType"));
                         ExSetNo2.add(jsonObject.getInt("ExSetNo"));
                         ExRepNo2.add(jsonObject.getInt("ExRepNo"));
-                        String imageURL = "http://" + IPAddress.awsipaddress + "/PhysioWebPortal/Images/" + jsonObject.getString("VThumbnail") +".jpg";
+                        String imageURL = "http://" + IPAddress.ipaddress + "/Images/" + jsonObject.getString("VThumbnail") +".jpg";
                         ExThumbnail1.add(imageURL);
                     }
 
@@ -1533,7 +1533,7 @@ public class InitFragment extends BaseFragment implements View.OnClickListener, 
                             ExType1.add(1);
                             ExSetNo1.add(jsonObject.getInt("ExSetNo"));
                             ExRepNo1.add(jsonObject.getInt("ExRepNo"));
-                            String imageURL = "http://" + IPAddress.awsipaddress + "/PhysioWebPortal/Images/" + jsonObject.getString("VThumbnail") +".jpg";
+                            String imageURL = "http://" + IPAddress.ipaddress + "/Images/" + jsonObject.getString("VThumbnail") +".jpg";
                             ExThumbnail1.add(imageURL);
                         }
                         else {
@@ -1543,7 +1543,7 @@ public class InitFragment extends BaseFragment implements View.OnClickListener, 
                             ExType2.add(2);
                             ExSetNo2.add(jsonObject.getInt("ExSetNo"));
                             ExRepNo2.add(jsonObject.getInt("ExRepNo"));
-                            String imageURL = "http://" + IPAddress.awsipaddress + "/PhysioWebPortal/Images/" + jsonObject.getString("VThumbnail") +".jpg";
+                            String imageURL = "http://" + IPAddress.ipaddress + "/Images/" + jsonObject.getString("VThumbnail") +".jpg";
                             ExThumbnail2.add(imageURL);
                         }
                     }

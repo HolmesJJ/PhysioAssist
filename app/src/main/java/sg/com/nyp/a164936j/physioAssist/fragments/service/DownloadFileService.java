@@ -157,8 +157,8 @@ public class DownloadFileService extends IntentService {
             exerciseName = CustomSharedPreference.videosStatus.getExerciseName();
             File file = new File(downloadFolder, exerciseId + "_" + fileType + "_" + language + ".mp4");
             try {
-                System.out.println("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/Videos/" + exerciseId + "_" + fileType + "_" + language + ".mp4");
-                URL url = new URL("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/Videos/" + exerciseId + "_" + fileType + "_" + language + ".mp4");
+                System.out.println("http://" + IPAddress.ipaddress + "/Videos/" + exerciseId + "_" + fileType + "_" + language + ".mp4");
+                URL url = new URL("http://" + IPAddress.ipaddress + "/Videos/" + exerciseId + "_" + fileType + "_" + language + ".mp4");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 FileOutputStream fos = null;
                 InputStream inputStream = null;

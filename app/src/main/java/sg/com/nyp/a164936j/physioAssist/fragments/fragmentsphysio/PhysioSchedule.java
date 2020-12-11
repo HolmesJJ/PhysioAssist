@@ -133,19 +133,19 @@ public class PhysioSchedule extends Fragment implements AdapterView.OnItemSelect
     private void getExercises(){
         String accessToken = GetSetSharedPreferences.getDefaults("access_token", getActivity().getApplicationContext());
         GetAuth getAuthSpinnerTask = new GetAuth(PhysioSchedule.this, GET_EXERCISES_TASK_ID);
-        getAuthSpinnerTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/api/exercises", accessToken);
+        getAuthSpinnerTask.execute("http://" + IPAddress.ipaddress + "/api/exercises", accessToken);
     }
 
     private void getPrescribedExercises(){
         String accessToken = GetSetSharedPreferences.getDefaults("access_token", getActivity().getApplicationContext());
         GetAuth getAuthSpinnerTask = new GetAuth(PhysioSchedule.this, GET_PRESCRIBED_EXERCISES_TASK_ID);
-        getAuthSpinnerTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/api/hospitalstay/" + stayId + "/prescribed", accessToken);
+        getAuthSpinnerTask.execute("http://" + IPAddress.ipaddress + "/api/hospitalstay/" + stayId + "/prescribed", accessToken);
     }
 
     private void refreshToken() {
         String parameters = getParameters();
         PostForm refreshTokenTask = new PostForm(PhysioSchedule.this, REFRESH_TOKEN_TASK_ID);
-        refreshTokenTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/token", parameters);
+        refreshTokenTask.execute("http://" + IPAddress.ipaddress + "/token", parameters);
     }
 
     // Convert information to JSON string

@@ -128,13 +128,13 @@ public class PatientLeaderBoard extends Fragment implements OnTaskCompleted{
     private void getPatientLeaderBoard(){
         String accessToken = GetSetSharedPreferences.getDefaults("access_token", getActivity().getApplicationContext());
         GetAuth getPatientLeaderBoardTask = new GetAuth(PatientLeaderBoard.this, GET_PATIENT_LEADER_BOARD_TASK_ID);
-        getPatientLeaderBoardTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/api/hospitalstay/" + stayId + "/performed", accessToken);
+        getPatientLeaderBoardTask.execute("http://" + IPAddress.ipaddress + "/api/hospitalstay/" + stayId + "/performed", accessToken);
     }
 
     private void refreshToken() {
         String parameters = getParameters();
         PostForm refreshTokenTask = new PostForm(PatientLeaderBoard.this, REFRESH_TOKEN_TASK_ID);
-        refreshTokenTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/token", parameters);
+        refreshTokenTask.execute("http://" + IPAddress.ipaddress + "/token", parameters);
     }
 
     // Convert information to JSON string

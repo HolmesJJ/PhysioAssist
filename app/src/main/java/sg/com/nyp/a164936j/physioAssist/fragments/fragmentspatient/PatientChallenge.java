@@ -104,13 +104,13 @@ public class PatientChallenge extends Fragment implements CustomOnClickListener,
     private void getPatientChallenge(){
         String accessToken = GetSetSharedPreferences.getDefaults("access_token", getActivity().getApplicationContext());
         GetAuth getPatientChallengeTask = new GetAuth(PatientChallenge.this, GET_PATIENT_CHALLENGE_TASK_ID);
-        getPatientChallengeTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/api/patients/" + patientId + "/prescribed", accessToken);
+        getPatientChallengeTask.execute("http://" + IPAddress.ipaddress + "/api/patients/" + patientId + "/prescribed", accessToken);
     }
 
     private void refreshToken() {
         String parameters = getParameters();
         PostForm refreshTokenTask = new PostForm(PatientChallenge.this, REFRESH_TOKEN_TASK_ID);
-        refreshTokenTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/token", parameters);
+        refreshTokenTask.execute("http://" + IPAddress.ipaddress + "/token", parameters);
     }
 
     // Convert information to JSON string

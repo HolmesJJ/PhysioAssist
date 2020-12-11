@@ -78,7 +78,7 @@ public class PhysioLogin extends Fragment implements OnTaskCompleted {
             else {
                 String parameters = getParameters();
                 PostForm loginTask = new PostForm(PhysioLogin.this, LOGIN_TASK_ID);
-                loginTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/token", parameters);
+                loginTask.execute("http://" + IPAddress.ipaddress + "/token", parameters);
                 showProgress(true);
             }
         });

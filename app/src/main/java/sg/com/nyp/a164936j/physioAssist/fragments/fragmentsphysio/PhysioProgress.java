@@ -431,13 +431,13 @@ public class PhysioProgress extends Fragment implements AdapterView.OnItemSelect
     private void getPatientProgress(){
         String accessToken = GetSetSharedPreferences.getDefaults("access_token", getActivity().getApplicationContext());
         GetAuth getPatientProgressTask = new GetAuth(PhysioProgress.this, GET_PATIENT_PROGRESS_TASK_ID);
-        getPatientProgressTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/api/hospitalstay/" + stayId + "/performed", accessToken);
+        getPatientProgressTask.execute("http://" + IPAddress.ipaddress + "/api/hospitalstay/" + stayId + "/performed", accessToken);
     }
 
     private void refreshToken() {
         String parameters = getParameters();
         PostForm refreshTokenTask = new PostForm(PhysioProgress.this, REFRESH_TOKEN_TASK_ID);
-        refreshTokenTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/token", parameters);
+        refreshTokenTask.execute("http://" + IPAddress.ipaddress + "/token", parameters);
     }
 
     // Convert information to JSON string

@@ -135,19 +135,19 @@ public class PatientProgress extends Fragment implements OnTaskCompleted {
     private void getPatientProgress(){
         String accessToken = GetSetSharedPreferences.getDefaults("access_token", getActivity().getApplicationContext());
         GetAuth getPatientProgressTask = new GetAuth(PatientProgress.this, GET_PATIENT_PROGRESS_TASK_ID);
-        getPatientProgressTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/api/hospitalstay/" + stayId + "/performed", accessToken);
+        getPatientProgressTask.execute("http://" + IPAddress.ipaddress + "/api/hospitalstay/" + stayId + "/performed", accessToken);
     }
 
     private void getGift(){
         String accessToken = GetSetSharedPreferences.getDefaults("access_token", getActivity().getApplicationContext());
         GetAuth getGiftTask = new GetAuth(PatientProgress.this, GET_GIFT_TASK_ID);
-        getGiftTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/api/hospitalstay/" + stayId + "/gifts", accessToken);
+        getGiftTask.execute("http://" + IPAddress.ipaddress + "/api/hospitalstay/" + stayId + "/gifts", accessToken);
     }
 
     private void refreshToken() {
         String parameters = getParameters();
         PostForm refreshTokenTask = new PostForm(PatientProgress.this, REFRESH_TOKEN_TASK_ID);
-        refreshTokenTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/token", parameters);
+        refreshTokenTask.execute("http://" + IPAddress.ipaddress + "/token", parameters);
     }
 
     // Convert information to JSON string

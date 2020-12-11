@@ -276,7 +276,7 @@ public class BlankCanvas extends AppCompatActivity implements CustomOnClickListe
     private void sendGift(){
         String accessToken = GetSetSharedPreferences.getDefaults("access_token", getApplicationContext());
         PostFormAuth getPatientLeaderBoardTask = new PostFormAuth(BlankCanvas.this, SEND_GIFT_TASK_ID);
-        getPatientLeaderBoardTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/api/giftreceived", convertToJSON(), accessToken);
+        getPatientLeaderBoardTask.execute("http://" + IPAddress.ipaddress + "/api/giftreceived", convertToJSON(), accessToken);
     }
 
     public String convertToJSON() {
@@ -307,7 +307,7 @@ public class BlankCanvas extends AppCompatActivity implements CustomOnClickListe
     private void refreshToken() {
         String parameters = getParameters();
         PostForm refreshTokenTask = new PostForm(BlankCanvas.this, REFRESH_TOKEN_TASK_ID);
-        refreshTokenTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/token", parameters);
+        refreshTokenTask.execute("http://" + IPAddress.ipaddress + "/token", parameters);
     }
 
     // Convert information to JSON string

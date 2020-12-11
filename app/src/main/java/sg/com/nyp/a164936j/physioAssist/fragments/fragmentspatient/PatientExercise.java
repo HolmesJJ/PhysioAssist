@@ -128,7 +128,7 @@ public class PatientExercise extends Fragment implements CustomOnClickListener, 
                 int parentId = CustomSharedPreference.videosStatus.getParentId();
                 int position = CustomSharedPreference.videosStatus.getPosition();
 
-                if(parentId == 2131296503){
+                if(parentId == 2131296504){
                     circleLoading = getViewByPosition(position, lv1).findViewById(R.id.circleLoading);
                     thumbnail = getViewByPosition(position, lv1).findViewById(R.id.exercise_thumbnail);
                 } else {
@@ -269,13 +269,13 @@ public class PatientExercise extends Fragment implements CustomOnClickListener, 
     private void getThumbnail(){
         String accessToken = GetSetSharedPreferences.getDefaults("access_token", getActivity().getApplicationContext());
         GetAuth getAuthThumbnailTask = new GetAuth(PatientExercise.this, THUMBNAIL_TASK_ID);
-        getAuthThumbnailTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/api/hospitalstay/" + stayId + "/prescribed", accessToken);
+        getAuthThumbnailTask.execute("http://" + IPAddress.ipaddress + "/api/hospitalstay/" + stayId + "/prescribed", accessToken);
     }
 
     private void refreshToken() {
         String parameters = getParameters();
         PostForm refreshTokenTask = new PostForm(PatientExercise.this, REFRESH_TOKEN_TASK_ID);
-        refreshTokenTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/token", parameters);
+        refreshTokenTask.execute("http://" + IPAddress.ipaddress + "/token", parameters);
     }
 
     // Convert information to JSON string
@@ -302,7 +302,7 @@ public class PatientExercise extends Fragment implements CustomOnClickListener, 
         int exerciseId;
         String exerciseName;
         // 如果是第一列
-        if(parentId == 2131296503) {
+        if(parentId == 2131296504) {
             exerciseId = exerciseId1.get(position);
             exerciseName = exerciseName1.get(position);
         }
@@ -371,7 +371,7 @@ public class PatientExercise extends Fragment implements CustomOnClickListener, 
         int exTimePerDay;
 
         // 如果是第一列
-        if(parentId == 2131296503) {
+        if(parentId == 2131296504) {
             exerciseId = exerciseId1.get(position);
             prescribedExId = prescribedExId1.get(position);
             exerciseName = exerciseName1.get(position);
@@ -602,7 +602,7 @@ public class PatientExercise extends Fragment implements CustomOnClickListener, 
                         ExSetNo1.add(jsonObject.getInt("ExSetNo"));
                         ExRepNo1.add(jsonObject.getInt("ExRepNo"));
                         ExTimePerDay1.add(jsonObject.getInt("ExTimePerDay"));
-                        String imageURL = "http://" + IPAddress.awsipaddress + "/PhysioWebPortal/Images/" + jsonObject.getString("VThumbnail") +".jpg";
+                        String imageURL = "http://" + IPAddress.ipaddress + "/Images/" + jsonObject.getString("VThumbnail") +".jpg";
                         exerciseThumbnail1.add(imageURL);
                     }
                     else if(jsonObject.getInt("ExType") == 2) {
@@ -613,7 +613,7 @@ public class PatientExercise extends Fragment implements CustomOnClickListener, 
                         ExSetNo2.add(jsonObject.getInt("ExSetNo"));
                         ExRepNo2.add(jsonObject.getInt("ExRepNo"));
                         ExTimePerDay2.add(jsonObject.getInt("ExTimePerDay"));
-                        String imageURL = "http://" + IPAddress.awsipaddress + "/PhysioWebPortal/Images/" + jsonObject.getString("VThumbnail") +".jpg";
+                        String imageURL = "http://" + IPAddress.ipaddress + "/Images/" + jsonObject.getString("VThumbnail") +".jpg";
                         exerciseThumbnail2.add(imageURL);
                     }
 
@@ -656,7 +656,7 @@ public class PatientExercise extends Fragment implements CustomOnClickListener, 
                             ExSetNo1.add(jsonObject.getInt("ExSetNo"));
                             ExRepNo1.add(jsonObject.getInt("ExRepNo"));
                             ExTimePerDay1.add(jsonObject.getInt("ExTimePerDay"));
-                            String imageURL = "http://" + IPAddress.awsipaddress + "/PhysioWebPortal/Images/" + jsonObject.getString("VThumbnail") +".jpg";
+                            String imageURL = "http://" + IPAddress.ipaddress + "/Images/" + jsonObject.getString("VThumbnail") +".jpg";
                             exerciseThumbnail1.add(imageURL);
                         }
                         else {
@@ -667,7 +667,7 @@ public class PatientExercise extends Fragment implements CustomOnClickListener, 
                             ExSetNo2.add(jsonObject.getInt("ExSetNo"));
                             ExRepNo2.add(jsonObject.getInt("ExRepNo"));
                             ExTimePerDay2.add(jsonObject.getInt("ExTimePerDay"));
-                            String imageURL = "http://" + IPAddress.awsipaddress + "/PhysioWebPortal/Images/" + jsonObject.getString("VThumbnail") +".jpg";
+                            String imageURL = "http://" + IPAddress.ipaddress + "/Images/" + jsonObject.getString("VThumbnail") +".jpg";
                             exerciseThumbnail2.add(imageURL);
                         }
                     }

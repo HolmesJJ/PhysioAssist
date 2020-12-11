@@ -190,7 +190,7 @@ public class CustomPatientExerciseAdapter extends BaseAdapter implements OnTaskC
     private void getPatientProgress(int peId){
         String accessToken = GetSetSharedPreferences.getDefaults("access_token", context);
         GetAuth getPatientProgressTask = new GetAuth(CustomPatientExerciseAdapter.this, GET_PERFORM_TASK_ID);
-        getPatientProgressTask.execute("http://" + IPAddress.awsipaddress + "/PhysioWebPortal/api/hospitalstay/" + stayId + "/performed", accessToken);
+        getPatientProgressTask.execute("http://" + IPAddress.ipaddress + "/api/hospitalstay/" + stayId + "/performed", accessToken);
     }
 
     // findVideoByName
