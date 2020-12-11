@@ -14,14 +14,14 @@
         android:layout_marginTop="40dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/fragment_layout_round_white_translucent">
 
         <TextView
             android:id="@+id/progress_top_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="30dp"
+            android:paddingTop="20dp"
             android:text="@string/progress_top_header"
             android:textAlignment="center"
             android:textColor="@color/colorBtnText"
@@ -49,7 +49,7 @@
             android:orientation="horizontal"
             android:layout_below="@id/progress_top_sub_header"
             android:gravity="center"
-            android:paddingBottom="30dp">
+            android:paddingBottom="20dp">
 
             <TextView
                 android:id="@+id/progress_top_score"
@@ -120,7 +120,7 @@
                 android:dividerHeight="10dp"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
-                android:paddingBottom="30dp"/>
+                android:paddingBottom="20dp"/>
 
         </LinearLayout>
 
@@ -137,10 +137,10 @@
             <LinearLayout
                 android:id="@+id/progress_bottom_trophy_sub_layout"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="130dp"
                 android:background="@drawable/fragment_layout_round_white_translucent"
                 android:orientation="vertical"
-                android:layout_marginBottom="30dp">
+                android:layout_marginBottom="20dp">
 
                 <TextView
                     android:id="@+id/progress_trophy_header"
